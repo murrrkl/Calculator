@@ -13,57 +13,6 @@ SIGN = ""
 
 # ФУНКЦИИ
 
-#Функции для кнопок с арифметическими операциями
-
-def click_plus():
-  global NUM_1
-  global NUM_2
-  global SIGN
-  NUM_2 = NUM_1
-  NUM_1 = 0
-  SIGN = "+"
-
-def click_minus():
-  global NUM_1
-  global NUM_2
-  global SIGN
-  NUM_2 = NUM_1
-  NUM_1 = 0
-  SIGN = "-"
-
-def click_del():
-  global NUM_1
-  global NUM_2
-  global SIGN
-  NUM_2 = NUM_1
-  NUM_1 = 0
-  SIGN = "/"
-
-def click_um():
-  global NUM_1
-  global NUM_2
-  global SIGN
-  NUM_2 = NUM_1
-  NUM_1 = 0
-  SIGN = "*"
-
-def click_ravno():
-  global NUM_1
-  global NUM_2
-  global SIGN
-
-  result = 0
-
-  if SIGN == "+":
-    result = NUM_2 + NUM_1
-  elif SIGN == "-":
-    result = NUM_2 - NUM_1
-  elif SIGN == "/":
-    result = NUM_2 / NUM_1
-  elif SIGN == "*":
-    result = NUM_2 * NUM_1
-
-  res.configure(text=result)
 
 # Функции для кнопок с цифрами
 
@@ -133,10 +82,10 @@ def click_0():
 res = Label(root, text="0", bg = "white", font=("Arial Bold", 30))
 
 # Кнопки +, -, /, *
-b_plus = Button(root, text="+", bg="grey", width = 8, height = 5, fg="black", command = click_plus)
-b_minus = Button(root, text="-", bg="grey", width = 8, height = 5, fg="black", command = click_minus)
-b_um = Button(root, text="/", bg="grey", width = 8, height = 5, fg="black", command = click_um)
-b_del = Button(root, text="x", bg="grey", width = 8, height = 5, fg="black", command = click_del)
+b_plus = Button(root, text="+", bg="grey", width = 8, height = 5, fg="black")
+b_minus = Button(root, text="-", bg="grey", width = 8, height = 5, fg="black")
+b_um = Button(root, text="/", bg="grey", width = 8, height = 5, fg="black")
+b_del = Button(root, text="x", bg="grey", width = 8, height = 5, fg="black")
 
 # Кнопки 7, 8, 9, CE
 b7 = Button(root, text="7", bg="white", width = 8, height = 5, fg="black", command=click_7)
@@ -148,7 +97,7 @@ b_ce = Button(root, text="CE", bg="orange", width = 8, height = 5, fg="black", c
 b4 = Button(root, text="4", bg="white", width = 8, height = 5, fg="black", command=click_4)
 b5 = Button(root, text="5", bg="white", width = 8, height = 5, fg="black", command=click_5)
 b6 = Button(root, text="6", bg="white", width = 8, height = 5, fg="black", command=click_6)
-b_r = Button(root, text="=", bg="orange", width = 8, height = 5, fg="black", command = click_ravno)
+b_r = Button(root, text="=", bg="orange", width = 8, height = 5, fg="black")
 
 # Кнопки 1, 2, 3, 0
 b1 = Button(root, text="1", bg="white", width = 8, height = 5, fg="black", command=click_1)
